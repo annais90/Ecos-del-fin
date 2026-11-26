@@ -220,3 +220,15 @@ tr:hover {
     text-shadow: 0 0 12px #ff4500;
     box-shadow: 0 0 15px #a33b08;
 }
+
+/* PORTADA PRINCIPAL DE LA PAGINA DEL JUEGO */
+.cabecera .portada-contenido {
+    display: block;
+    width: min(100%, 520px);
+    max-height: 320px;
+    object-fit: cover;
+    margin: 22px auto 0;
+    border: 3px solid #00e5ff;
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.35);
+}
