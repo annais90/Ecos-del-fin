@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111122;
+    color: white;
+}
+
+/* CUADRÍCULA PRINCIPAL: 2 FILAS Y 2 COLUMNAS */
+.contenedor {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+/* CABECERA */
+.cabecera {
+    grid-column: 1 / 3;
+    background-color: #171735;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid #00e5ff;
+}
+
+.cabecera h1 {
+    color: #00e5ff;
+    font-size: 45px;
+    margin: 0;
+}
+
+.cabecera p {
+    font-size: 18px;
+}
+
+/* PANEL DE NAVEGACIÓN */
+.navegacion {
+    background-color: #080810;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid #00e5ff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.navegacion a:hover {
+    background-color: #00e5ff;
+    color: #111122;
+}
+
+/* CONTENIDO */
+.contenido {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* SECCIONES */
+section {
+    background-color: #191936;
+    padding: 25px;
+    border: 1px solid #00e5ff;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #00e5ff;
+}
+
+p {
+    line-height: 1.6;
+}
+
+li {
+    margin: 10px;
+}
+
+/* IMAGEN */
+section img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #00e5ff;
+    border-radius: 10px;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #00e5ff;
+    color: #111122;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #555577;
+}
+
+tr:hover {
+    background-color: #242450;
+}/* GALERÍA DE VIDEOJUEGOS */
+
+.galeria {
+    grid-column: 1 / 3;
+    background-color: #101020;
+    border: 1px solid #00e5ff;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.galeria p {
+    text-align: center;
+    font-size: 17px;
+    color: #dddddd;
+}
+
+.imagenes-gameplay {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.imagenes-gameplay div {
+    background-color: #191936;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #333366;
+    transition: transform 0.3s;
+}
+
+.imagenes-gameplay img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.imagenes-gameplay div:hover {
+    transform: scale(1.04);
+    border-color: #00e5ff;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+.imagenes-gameplay h3 {
+    color: #00e5ff;
+    font-size: 17px;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 800px) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera {
+        grid-column: 1;
+    }
+
+    .navegacion {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-column: 1;
+    }
+
+    .imagenes-gameplay {
+        grid-template-columns: 1fr;
+    }
+
+}/* ICONO DEL VIDEOJUEGO */
+
+.icono-juego {
+    display: inline-block;
+    font-size: 35px;
+    color: #ff6b1a;
+    border: 2px solid #ff6b1a;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    line-height: 60px;
+    margin-bottom: 12px;
+    text-shadow: 0 0 12px #ff4500;
+    box-shadow: 0 0 15px #a33b08;
+}
